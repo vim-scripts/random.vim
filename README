@@ -1,0 +1,4 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=668
+
+This "color scheme" will pseudo-randomly  load a color scheme among all available color schemes. The main logic is based on vimtip #358.
+
