@@ -2,13 +2,17 @@
 " Vim meta color file                                      "
 " Maintainer         : W. H. Jou                           "
 " Email              : whjou@singnet.com.sg                "
-" Most Recent Update : 2003-06-09                          "
-" Version            : 1.0                                 "
+" Most Recent Update : 2003-06-24                          "
+" Version            : 1.1                                 "
 "----------------------------------------------------------"
 " Define function once only
 if !exists("*s:LoadRandomColorScheme")
   function s:LoadRandomColorScheme()
-    let s:color_file_list = substitute(globpath(&runtimepath, 'colors/*.vim'), "\n", ',', 'g')
+    let s:self            = globpath(&runtimepath, 'colors/random.vim')
+    let s:color_file_list = globpath(&runtimepath, 'colors/*.vim')
+    let s:color_file_list = substitute(s:color_file_list, s:self . "\n", '' , 'g')
+    let s:color_file_list = substitute(s:color_file_list, "\n"         , ',', 'g')
+
     if strlen(s:color_file_list)
       if s:color_file_list =~ ','
         let s:rnd  = matchstr(localtime(), '..$') + 0
@@ -29,6 +33,7 @@ if !exists("*s:LoadRandomColorScheme")
     endif
 
     unlet! s:color_file_list 
+    unlet! s:self_file
   endfunction
 endif
 "----------------------------------------------------------"
