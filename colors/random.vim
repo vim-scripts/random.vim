@@ -2,8 +2,8 @@
 " Vim meta color file                                      "
 " Maintainer         : W. H. Jou                           "
 " Email              : whjou@singnet.com.sg                "
-" Most Recent Update : 2003-08-12                          "
-" Version            : 1.2                                 "
+" Most Recent Update : 2003-09-15                          "
+" Version            : 1.3                                 "
 "----------------------------------------------------------"
 " Define function once only
 if !exists("*s:LoadRandomColorScheme")
